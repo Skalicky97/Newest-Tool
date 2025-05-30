@@ -21,9 +21,9 @@ criteria = {
     "Obstructive Sleep Apnea (OSA)": {"No": 0, "Yes or suspected": 5},
     "Cervical Spine Mobility": {"Full": 0, "Moderately Limited": 10, "Severely Limited": 15},
     "ASA": {"1": 0, "2": 5, "3": 10, "4": 10},
-    "Congenital Facial Abnormalities": {"Yes": 10, "No": 0},
-    "Airway Obstruction (i.e, tumor, bleeding, etc)" : {"Yes": 10, "No": 0},
-    "Facial/Neck Trauma": {"Yes": 10, "No": 0},
+    "Congenital Facial Abnormalities": {"No": 0, "Yes": 10},
+    "Airway Obstruction (i.e, tumor, bleeding, etc)" : {"No": 0, "Yes": 10},
+    "Facial/Neck Trauma": {"No": 0, "Yes": 10},
 }
 
 scores = {}
