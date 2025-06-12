@@ -7,7 +7,7 @@ st.title("🫁 Quantitative Airway Assessment Tool")
 # Define the scoring criteria
 criteria = {
     "Mallampati": {"Class I": 0, "Class II": 5, "Class III": 10, "Class IV": 10},
-    "Thyromental Distance": {"> 6 cm (3 fingers)": 0, "< 6 cm (3 fingers)": 5},
+    "Thyromental Distance": {"> 6 cm (3 fingers)": 0, "< 6 cm (3 fingers)": 10},
     "Mouth Opening": {"≥ 3 fingers": 0, "< 3 fingers": 5},
     "BMI": {
         "< 29.9": 0,
@@ -17,11 +17,11 @@ criteria = {
     },
     "Upper Lip Bite Test": {"Class I": 0, "Class II": 10, "Class III": 15},
     "Surgery/Radiation to Head/Neck": {"No": 0, "Yes": 10},
-    "Previous Difficult Airway": {"No": 0, "Yes": 10},
+    "Previous Difficult Airway": {"No": 0, "Yes": 20},
     "Obstructive Sleep Apnea (OSA)": {"No": 0, "Yes or suspected": 5},
     "Cervical Spine Mobility": {"Full": 0, "Moderately Limited": 10, "Severely Limited": 15},
     "ASA": {"1": 0, "2": 5, "3": 10, "4": 10},
-    "Congenital Facial Abnormalities": {"No": 0, "Yes": 10},
+    "Congenital Facial Abnormalities": {"No": 0, "Yes": 20},
     "Airway Obstruction (i.e, tumor, bleeding, etc)" : {"No": 0, "Yes": 10},
     "Facial/Neck Trauma": {"No": 0, "Yes": 10},
 }
@@ -39,10 +39,10 @@ for criterion, options in criteria.items():
 total_score = sum(scores.values())
 
 # Determine risk level
-if total_score <= 30:
+if total_score <= 40:
     risk_level = "Low"
     risk_color = "green"
-elif total_score <= 80:
+elif total_score <= 100:
     risk_level = "Moderate"
     risk_color = "orange"
 else:
